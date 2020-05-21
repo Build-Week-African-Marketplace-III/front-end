@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { PrimaryButton, Form, Input } from './StyledComponents';
 export const Login = () => {
 
     const [ user, setUser ] = useState({ 
@@ -26,11 +26,11 @@ export const Login = () => {
     }
 
     return (
-        <form>
-        {/* <form onSubmit={hanldeSubmit}> */}
-            <input name='username' placeholder='Username' onChange={handleChange} />
-            <input name='password' type='password' placeholder='Password' onChange={handleChange}/>
-            <button type='submit' />
-        </form>
+        <Form>
+        {/* <Form onSubmit={hanldeSubmit}> */}
+            <Input name='username' placeholder='Username' onChange={handleChange} />
+            <Input name='password' type='password' placeholder='Password' onChange={handleChange}/>
+            <PrimaryButton>Submit</PrimaryButton>
+        </Form>
     )
 } 
