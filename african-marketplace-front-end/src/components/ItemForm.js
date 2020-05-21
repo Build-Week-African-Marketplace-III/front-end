@@ -26,8 +26,6 @@ const ItemsForm = (props) => {
         itemPrice: "",
         itemLocation: ""
       });
-      
-       
 
     //   Backend API URL here for the location to POST items to
     // const backendAPIURL = "https://reqres.in/api/users";
@@ -40,6 +38,7 @@ const ItemsForm = (props) => {
         .catch(error => {console.log(error)})
       };
     
+      // Form state updates as text is entered and the input changes
       const inputChange = (e) => {
         e.persist();
         validate(e);
@@ -48,7 +47,7 @@ const ItemsForm = (props) => {
           setitemformState({ ...itemformState, [e.target.name]: value });
       };
 
-
+      // Validation logic using yup and the yup schema
       const validate = (e) => {  
         yup
           .reach(formSchema, e.target.name)
@@ -65,7 +64,7 @@ const ItemsForm = (props) => {
           });
       };
     return (
-    <div className="pizza">
+    <div className="form">
         
       <h1>Add your new item</h1>
       
@@ -92,10 +91,10 @@ const ItemsForm = (props) => {
         <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} > 
         
         <br />
-          <option>Kenya</option>
-          <option>Ethiopia</option>
-          <option>Rwanda</option>
-          <option>Burundi</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Burundi">Burundi</option>
         </select>
   
         <br />
