@@ -8,9 +8,8 @@ import * as yup from "yup";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
       <ItemsForm />
-      </header>
     </div>
   );
 }
