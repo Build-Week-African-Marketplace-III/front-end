@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import * as yup from "yup"; 
 import axios from 'axios'
+import {Form, Input, PrimaryButton} from './StyledComponents'
 
 
 // Validation Logic for the item form
@@ -69,43 +70,43 @@ const ItemsForm = (props) => {
       <h1>Add your new item</h1>
       
   
-      <form onSubmit={formSubmit}>
+      <Form onSubmit={formSubmit}>
      
         <label htmlFor="itemName">Item Name
-            <input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
+            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
             {errorState.itemName.length > 0 ? (
             <p>{errorState.itemName} </p>
           ) : null}
         </label>
-        <br />
+        
         <label htmlFor="itemDescription">Item Description
-            <input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} />
+            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} />
             {errorState.itemDescription.length > 0 ? (
             <p>{errorState.itemDescription} </p>
           ) : null}
-          <br />
+        
         </label>
-        <br />
+        
         <label htmlFor="itemDescription" />Item's Market Location
-        <br />
+        
         <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} > 
         
-        <br />
+        
           <option value="Kenya">Kenya</option>
           <option value="Ethiopia">Ethiopia</option>
           <option value="Rwanda">Rwanda</option>
           <option value="Burundi">Burundi</option>
         </select>
   
-        <br />
+        
     
         <label htmlFor="AddItem">Add Item Listing 
-        <br />
+        
         <input type="submit" name="submit" />
         </label>
   
         
-      </form>
+      </ Form>
     </div>
     )
   };
