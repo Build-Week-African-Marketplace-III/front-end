@@ -1,13 +1,22 @@
 import React from 'react';
 import './App.css';
-import { Login } from './components/Login';
+import ItemsForm from './components/ItemForm';
+import Item from './components/Item'
+import MainComponent from './components/MainComponent'
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import axios from 'axios'
+import * as yup from "yup";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <Login />
-      </header>
+      <Router>
+        <MainComponent />
+      <ItemsForm />
+      </Router>
+      
     </div>
   );
 }
