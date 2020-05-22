@@ -3,12 +3,17 @@ import { yellow, neutral, teal, orange } from './colors';
 
 export const defaultTheme = {
     primaryColor: yellow,
-    primaryColorButton: teal,
+    primaryButtonColor: teal,
     primaryColorButtonHover: "none",
     primaryFontColor: neutral,
     primaryFontColorHover: teal,
+    secondaryButtonBorderHover: yellow,
     primaryFont,
+
     secondaryColor: teal,
-    secondaryButtonColor: yellow,
+    secondaryButtonColor: orange,
     secondaryButtonColorHover: "none",
+    secondaryFontColor: neutral,
+    secondaryFontColorHover: teal,
+    secondaryButtonBorderHover: teal,
 }

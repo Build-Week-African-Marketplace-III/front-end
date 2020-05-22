@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { defaultTheme, typeScale, primaryFont, neutral } from '../utils';
 
-export const PrimaryButton = styled.button `
+
+const Button = styled.button `  
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
@@ -10,17 +11,33 @@ export const PrimaryButton = styled.button `
     cursor: pointer;
     font-family: ${primaryFont};
     transition: background-color 0.2s linear, color 0.2s linear;
-    background-color: ${defaultTheme.primaryColorButton};
-    color: ${defaultTheme.primaryFontColor};
-    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 2px solid ${defaultTheme.primaryColorButton};
 
+
+`
+
+export const PrimaryButton = styled(Button) `
+
+    background-color: ${defaultTheme.primaryButtonColor};
+    color: ${defaultTheme.primaryFontColor};
+    border: 2px solid ${defaultTheme.primaryButtonColor};
 
     &:hover {
         background: ${defaultTheme.primaryColorButtonHover};
-        border: 2px solid ${defaultTheme.primaryColorButton};
+        border: 2px solid ${defaultTheme.primaryButtonColor};
         color: ${defaultTheme.primaryFontColorHover};
+    }
+`
+
+export const SecondaryButton = styled(Button) `
+    background-color: ${defaultTheme.secondaryButtonColor};
+    color: ${defaultTheme.secondaryFontColor};
+    border: 2px solid ${defaultTheme.secondaryButtonColor};
+
+    &:hover {
+        background: ${defaultTheme.secondaryButtonColorHover};
+        border: 2px solid ${defaultTheme.secondaryButtonBorderHover};
+        color: ${defaultTheme.secondaryFontColorHover};
     }
 `
 
@@ -47,3 +64,18 @@ export const Input = styled.input `
 export const ItemCard = styled.div `
 
 `
+
+export const Header = styled.header `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+`
+
+export const Footer = styled.footer `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+`
+
