@@ -5,10 +5,12 @@ import React from 'react';
 const Item = (props) => {
   return (
     <div className="item">
-      <h1>{props.itemName}</h1>
+      <p>{props.itemName}</p>
       <p>{props.itemDescription}</p>
       <p>{props.itemPrice}</p>
       <p>{props.itemLocation}</p>
+      {/* Not sure if this field will come back. */}
+      {/* <p>{props.id}</p> */}
     </div>
   );
 };
