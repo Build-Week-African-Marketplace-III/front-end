@@ -14,34 +14,23 @@ function SignUp() {
                     name='name'
                     type='text'
                 />
-                {/* Name */}
+                {/* Email */}
                 <label htmlFor='email'>Email</label>
                 <input 
                     name='email'
                     type='text'
                 />
-                {/* Name */}
+                {/* Password */}
                 <label htmlFor='password'>Password</label>
                 <input 
                     name='password'
                     type='text'
                 />
-                {/* Name */}
+                {/* Location - city */}
                 <label htmlFor='location'>Location</label>
                 <input 
                     name='location'
                     type='text'
-                />
-                {/* Name */}
-                <label htmlFor='role'>Role</label>
-                <input 
-                    name='role'
-                    type='dropdown'
-                />
-                <label htmlFor='terms'>Terms Of Service</label>
-                <input 
-                    name='terms'
-                    type='checkbox'
                 />
             </form>
         </div>
