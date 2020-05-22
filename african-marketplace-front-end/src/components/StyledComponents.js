@@ -42,3 +42,18 @@ export const Input = styled.input `
     padding: 25px;
     
 `
+
+export const Header = styled.header `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+`
+
+export const Footer = styled.footer `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+`
+
