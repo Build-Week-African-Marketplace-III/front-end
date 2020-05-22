@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { defaultTheme, typeScale, primaryFont, neutral } from '../utils';
 
-export const PrimaryButton = styled.button `
+
+const Button = styled.button `  
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
@@ -10,14 +11,33 @@ export const PrimaryButton = styled.button `
     cursor: pointer;
     font-family: ${primaryFont};
     transition: background-color 0.2s linear, color 0.2s linear;
-    background-color: ${defaultTheme.primaryColorButton};
-    color: ${defaultTheme.primaryFontColor};
-    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+
+`
+
+export const PrimaryButton = styled(Button) `
+
+    background-color: ${defaultTheme.primaryButtonColor};
+    color: ${defaultTheme.primaryFontColor};
+    border: 2px solid ${defaultTheme.primaryButtonColor};
+
     &:hover {
-        background-color: ${defaultTheme.primaryColorButtonHover};
+        background: ${defaultTheme.primaryColorButtonHover};
+        border: 2px solid ${defaultTheme.primaryButtonColor};
         color: ${defaultTheme.primaryFontColorHover};
+    }
+`
+
+export const SecondaryButton = styled(Button) `
+    background-color: ${defaultTheme.secondaryButtonColor};
+    color: ${defaultTheme.secondaryFontColor};
+    border: 2px solid ${defaultTheme.secondaryButtonColor};
+
+    &:hover {
+        background: ${defaultTheme.secondaryButtonColorHover};
+        border: 2px solid ${defaultTheme.secondaryButtonBorderHover};
+        color: ${defaultTheme.secondaryFontColorHover};
     }
 `
 
@@ -25,7 +45,7 @@ export const Form = styled.form `
     position: absolute;
     width: 477px;
     height: 515px;
-    background: rgba(34, 56, 67, 0.76);
+    background: rgba(251, 175, 0, 0.76);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
@@ -35,12 +55,14 @@ export const Form = styled.form `
 export const Input = styled.input `
     border: none;
     border-bottom: 2px solid ${neutral};
-    background: none;
     font-family: ${primaryFont};
     max-width: 400px;
     min-width: 300px;
     padding: 25px;
     
+`
+export const ItemCard = styled.div `
+
 `
 
 export const Header = styled.header `
