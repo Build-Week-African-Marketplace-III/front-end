@@ -14,9 +14,12 @@ export const PrimaryButton = styled.button `
     color: ${defaultTheme.primaryFontColor};
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid ${defaultTheme.primaryColorButton};
+
 
     &:hover {
-        background-color: ${defaultTheme.primaryColorButtonHover};
+        background: ${defaultTheme.primaryColorButtonHover};
+        border: 2px solid ${defaultTheme.primaryColorButton};
         color: ${defaultTheme.primaryFontColorHover};
     }
 `
@@ -25,7 +28,7 @@ export const Form = styled.form `
     position: absolute;
     width: 477px;
     height: 515px;
-    background: rgba(34, 56, 67, 0.76);
+    background: rgba(251, 175, 0, 0.76);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
@@ -35,10 +38,12 @@ export const Form = styled.form `
 export const Input = styled.input `
     border: none;
     border-bottom: 2px solid ${neutral};
-    background: none;
     font-family: ${primaryFont};
     max-width: 400px;
     min-width: 300px;
     padding: 25px;
     
+`
+export const ItemCard = styled.div `
+
 `

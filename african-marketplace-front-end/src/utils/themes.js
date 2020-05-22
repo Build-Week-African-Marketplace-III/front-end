@@ -2,10 +2,13 @@ import { primaryFont } from './typography';
 import { yellow, neutral, teal, orange } from './colors';
 
 export const defaultTheme = {
-    primaryColor: teal,
-    primaryColorButton: yellow,
-    primaryColorButtonHover: neutral,
+    primaryColor: yellow,
+    primaryColorButton: teal,
+    primaryColorButtonHover: "none",
     primaryFontColor: neutral,
-    primaryFontColorHover: orange,
-    primaryFont
+    primaryFontColorHover: teal,
+    primaryFont,
+    secondaryColor: teal,
+    secondaryButtonColor: yellow,
+    secondaryButtonColorHover: "none",
 }
