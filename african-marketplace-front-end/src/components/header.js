@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { HeaderStyle } from 'styled-components';
+import { HeaderStyle } from './StyledComponents';
 
 function Header() {
     return (
