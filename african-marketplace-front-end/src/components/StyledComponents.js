@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { defaultTheme, typeScale, primaryFont, neutral } from '../utils';
+import { defaultTheme, typeScale, primaryFont, neutral, black } from '../utils';
 
 
 const Button = styled.button `  
@@ -42,7 +42,6 @@ export const SecondaryButton = styled(Button) `
 `
 
 export const Form = styled.form `
-    position: absolute;
     width: 477px;
     height: 515px;
     background: rgba(251, 175, 0, 0.76);
@@ -65,17 +64,23 @@ export const ItemCard = styled.div `
 
 `
 
-export const Header = styled.header `
+export const HeaderStyle = styled.header `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: ${primaryFont};
+    position: top;
+    color: ${black};
+    font-size: ${typeScale.header1};
     
 `
 
-export const Footer = styled.footer `
+export const FooterStyle = styled.footer `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: ${primaryFont};
+    font-size: ${typeScale.copyrightText};
     
 `
 

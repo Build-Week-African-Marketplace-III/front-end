@@ -7,7 +7,7 @@ export const defaultTheme = {
     primaryColorButtonHover: "none",
     primaryFontColor: neutral,
     primaryFontColorHover: teal,
-    secondaryButtonBorderHover: yellow,
+    primaryButtonBorderHover: yellow,
     primaryFont,
 
     secondaryColor: teal,
