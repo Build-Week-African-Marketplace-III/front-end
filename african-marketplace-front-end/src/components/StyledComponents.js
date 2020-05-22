@@ -65,14 +65,14 @@ export const ItemCard = styled.div `
 
 `
 
-export const Header = styled.header `
+export const HeaderStyle = styled.header `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     
 `
 
-export const Footer = styled.footer `
+export const FooterStyle = styled.footer `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
