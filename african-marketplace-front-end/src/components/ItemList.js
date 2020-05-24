@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Item from "./Item";
 
-const MainComponent = () => {
+const ItemList = () => {
   let [itemListState, setitemListState] = useState([]);
 
   const backendAPI = "https://swapi.dev/api/people";
@@ -30,4 +30,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent
+export default ItemList
