@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { PrimaryButton, SecondaryButton, Form, Input } from './StyledComponents';
-export const Login = () => {
+
+
+export const Login = (props) => {
 
     const [ user, setUser ] = useState({ 
-        username: '', 
+        email: '', 
         password: '' 
     });
 
@@ -26,12 +28,15 @@ export const Login = () => {
     }
 
     return (
-        <Form>
+        <Form className='centeredToPageForms'>
         {/* <Form onSubmit={hanldeSubmit}> */}
-            <Input name='username' placeholder='Username' onChange={handleChange} />
+            <h1>Login</ h1>
+            <Input name='email' placeholder='Email' onChange={handleChange} />
             <Input name='password' type='password' placeholder='Password' onChange={handleChange}/>
-            <PrimaryButton>Login</PrimaryButton>
-            <SecondaryButton>Sign Up</SecondaryButton>
+            <div className='buttonsLogin'>
+                <PrimaryButton>Login</PrimaryButton>
+                <SecondaryButton onClick={() => {props.history.push('/signup')}}>Sign Up</SecondaryButton>
+            </div>
         </Form>
     )
 } 
