@@ -66,16 +66,32 @@ export const ItemCard = styled.div `
 `
 
 export const HeaderStyle = styled.header `
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 30px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    
+    font-family: ${primaryFont};
+    letter-spacing: .25;
+    position: top;
+    color: ${black};
+    font-size: ${typeScale.header1};
+        
 `
 
 export const FooterStyle = styled.footer `
+    position: absolute;
+    bottom: 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+    font-family: ${primaryFont};
+    font-size: ${typeScale.copyrightText};
+    color: ${neutral};
+    background: ${black};
+    opacity: 0.76;
+    width: 100vw;
+    height: 90px;  
 `
 
