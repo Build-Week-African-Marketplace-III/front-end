@@ -3,7 +3,7 @@ import { PrimaryButton, SecondaryButton, Form, Input } from './StyledComponents'
 export const Login = () => {
 
     const [ user, setUser ] = useState({ 
-        username: '', 
+        email: '', 
         password: '' 
     });
 
@@ -28,7 +28,7 @@ export const Login = () => {
     return (
         <Form>
         {/* <Form onSubmit={hanldeSubmit}> */}
-            <Input name='username' placeholder='Username' onChange={handleChange} />
+            <Input name='email' placeholder='Email' onChange={handleChange} />
             <Input name='password' type='password' placeholder='Password' onChange={handleChange}/>
             <PrimaryButton>Login</PrimaryButton>
             <SecondaryButton>Sign Up</SecondaryButton>

@@ -1,19 +1,21 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
-import { Header } from 'styled-components';
+import { Link } from 'react-router-dom';
+import { HeaderStyle } from './StyledComponents';
+import Logo from '../img/logo-black.png'
 
-function header() {
+function Header() {
     return (
-        <Header>
-            <h1>African Marketplace</h1>
-            <nav>
+        <HeaderStyle>
+            <img src={Logo} alt="African Marketplace Logo" className="logo"/>
+            <div>African Marketplace</div>
+            <nav className="nav">
                 <Link to={`/`}>Home</Link>
                 <Link to={`/about`}>About</Link>
                 <Link to={`/order`}>Order Now</Link>
                 <Link to={`/contact`}>Contact Us</Link>
             </nav>
-        </Header>
+        </HeaderStyle>
     )
 }
 
-export default header
+export default Header;

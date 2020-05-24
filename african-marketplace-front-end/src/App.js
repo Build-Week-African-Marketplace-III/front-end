@@ -1,22 +1,13 @@
 import React from 'react';
 import './App.css';
-import ItemsForm from './components/ItemForm';
-import Item from './components/Item'
-import MainComponent from './components/MainComponent'
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import axios from 'axios'
-import * as yup from "yup";
-
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <MainComponent />
-      <ItemsForm />
-      </Router>
-      
+      <Header />
+      <Footer />
     </div>
   );
 }
