@@ -78,6 +78,10 @@ export const ItemCard = styled.div `
 `
 
 export const HeaderStyle = styled.header `
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0737079098963a20e404bcbeab6b7aec42cfbdbc
     position: absolute;
     top: 0px;
     right: 0px;
