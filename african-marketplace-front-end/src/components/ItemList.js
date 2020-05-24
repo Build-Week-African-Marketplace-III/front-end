@@ -1,10 +1,10 @@
 // Temporary location for all my logic and my API call to display Item componenet with Props
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Item from "./Item";
 
-const MainComponent = () => {
+const ItemList = () => {
   let [itemListState, setitemListState] = useState([]);
 
   const backendAPI = "https://swapi.dev/api/people";
@@ -24,9 +24,13 @@ const MainComponent = () => {
   return (
     <>
       <h1>Item List</h1>
-      {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>)}
+      <Link to="/itemform">
+        <h2>Add New Item Test</h2>
+      </Link>
+      {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>
+      )}
     </>
   );
 };
 
-export default MainComponent;
+export default ItemList;
