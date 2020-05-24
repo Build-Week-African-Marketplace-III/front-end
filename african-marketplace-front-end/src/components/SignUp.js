@@ -1,11 +1,15 @@
 import React from 'react'
+import { Form, Input, PrimaryButton } from './StyledComponents';
 
 function SignUp() {
     return (
-        <div className="sign-up">
+        <Form className="centeredToPageForms">
             <h1>Sign Up</h1>
-        </div>
+            <Input name='email' placeholder='Email' />
+            <Input name='password' type='password' placeholder='Password'/>
+            <PrimaryButton>Submit</PrimaryButton>
+        </Form>
     )
 }
 
-export default SignUp
+export default SignUp;

@@ -8,12 +8,12 @@ function Header() {
         <HeaderStyle>
             <img src={Logo} alt="African Marketplace Logo" className="logo"/>
             <div>African Marketplace</div>
-            <nav className="nav">
+            {/* <nav className="nav">
                 <Link to={`/`}>Home</Link>
                 <Link to={`/about`}>About</Link>
                 <Link to={`/order`}>Order Now</Link>
                 <Link to={`/contact`}>Contact Us</Link>
-            </nav>
+            </nav> */}
         </HeaderStyle>
     )
 }
