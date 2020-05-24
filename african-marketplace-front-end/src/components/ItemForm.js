@@ -69,7 +69,7 @@ const ItemForm = (props) => {
         
       <h1>Add your new item</h1>
       
-  
+  {/* Updated to include the Form styled component */}
       <Form onSubmit={formSubmit}>
      
         <label htmlFor="itemName">Item Name
