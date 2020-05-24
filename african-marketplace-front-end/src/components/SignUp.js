@@ -1,9 +1,7 @@
-
 import React from 'react';
 import * as yup from "yup";
 import axios from "axios";
 import { Form, Input, PrimaryButton } from './StyledComponents';
-
 
 function SignUp() {
 
@@ -83,7 +81,7 @@ function SignUp() {
 
 
     return (
-        <div className="sign-up">
+        <Form className="centeredToPageForms">
             <h1>Sign Up</h1>
             <form>
                 {/* Name */}
@@ -119,8 +117,8 @@ function SignUp() {
                     onChange={inputChange}
                 />{errors.location.length > 0 ? <p className='error'>{errors.location}</p> : null}
             </form>
-        </div>
+        </Form>
     )
 }
 
-export default SignUp
+export default SignUp;

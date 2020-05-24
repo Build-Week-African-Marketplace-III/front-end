@@ -24,10 +24,9 @@ const MainComponent = () => {
   return (
     <>
       <h1>Item List</h1>
-      {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>
-      )}
+      {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>)}
     </>
   );
 };
 
-export default MainComponent
+export default MainComponent;
