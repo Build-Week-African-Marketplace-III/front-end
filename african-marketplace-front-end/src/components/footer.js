@@ -1,15 +1,15 @@
 import React from 'react'
-import { Footer } from 'styled-components';
+import { FooterStyle } from './StyledComponents';
 
-function footer() {
+function Footer() {
     return (
-        <Footer>
+        <FooterStyle>
             <h1>African Marketplace</h1>
             <div class="copyright">
                 © 2020 Copyright: Build-Week-African-Marketplace-III
             </div>
-        </Footer>
+        </FooterStyle>
     )
 }
 
-export default footer
+export default Footer

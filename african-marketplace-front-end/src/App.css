@@ -4,13 +4,19 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
+  font-size: 16px;
   background-image: url('./img/market-people.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
+.nav {
+  font-size: 20px;
+
+}
+
 
 .App-header {
   min-height: 100vh;
@@ -19,3 +25,18 @@
   justify-content: center;
 }
 
+.logo {
+  max-width: 50px;
+}
+
+.centeredToPageForms {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonsLogin {
+  display: flex;
+  
+}

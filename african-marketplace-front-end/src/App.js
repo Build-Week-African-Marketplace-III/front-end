@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
-
-
-import { Switch, Route } from "react-router-dom";
-import ItemForm from './components/ItemForm';
-
+import { Login } from './components/Login';
+import SignUp from './components/SignUp';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-        <Switch>
-        <Route exact path="/itemform" component={ItemForm} />
+      <Header />
+      <Footer />
 
-        </Switch>
-      
+
+      {/* Routes Section Start */}
+      <Route exact path='/' component={Login} />
+      <Route path='/signup' render={(props) => <SignUp {...props} />} />
+      {/* End of Routes Section */}
+
+
     </div>
   );
 }
