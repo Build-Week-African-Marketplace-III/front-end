@@ -13,6 +13,7 @@ const Button = styled.button `
     transition: background-color 0.2s linear, color 0.2s linear;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px 24px;
+    outline: none;
 
 
 `
@@ -66,6 +67,7 @@ export const Input = styled.input `
     padding: 25px;
     font-family: ${primaryFont};
     outline: none;
+    background: ${neutral};
 
     ::placeholder {
         font-size: ${typeScale.paragraph};
