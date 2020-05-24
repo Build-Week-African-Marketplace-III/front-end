@@ -43,7 +43,7 @@ function SignUp() {
                 name: '', 
                 email: '',
                 password: '',
-                tos: ""
+                location: ""
             });
           })
           .catch(err => console.log(err.response));
