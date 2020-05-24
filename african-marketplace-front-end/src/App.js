@@ -12,10 +12,11 @@ function App() {
       <Header />
       <Footer />
 
-
       {/* Routes Section Start */}
+
       <Route exact path='/' component={Login} />
       <Route path='/signup' render={(props) => <SignUp {...props} />} />
+
       {/* End of Routes Section */}
 
 
