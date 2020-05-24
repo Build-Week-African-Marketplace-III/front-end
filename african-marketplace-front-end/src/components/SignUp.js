@@ -34,7 +34,7 @@ function SignUp() {
     const formSubmit = e => {
         e.preventDefault();
         axios
-          .post("https://reqres.in/api/users", formState)
+          .post("https://sauti-africa.herokuapp.com/", formState)
           .then(res => {
             setPost(res.data); // get just the form data from the REST api
             console.log("success", post);
