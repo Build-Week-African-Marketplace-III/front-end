@@ -3,6 +3,7 @@ import { defaultTheme, typeScale, primaryFont, neutral, black } from '../utils';
 
 
 const Button = styled.button `  
+    box-sizing: border-box;
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
@@ -38,7 +39,9 @@ export const SecondaryButton = styled(Button) `
         background: ${defaultTheme.secondaryButtonColorHover};
         border: 2px solid ${defaultTheme.secondaryButtonBorderHover};
         color: ${defaultTheme.secondaryFontColorHover};
+
     }
+
 `
 
 export const Form = styled.form `
