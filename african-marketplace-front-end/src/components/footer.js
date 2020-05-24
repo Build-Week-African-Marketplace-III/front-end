@@ -1,7 +1,7 @@
 import React from 'react'
 import { FooterStyle } from './StyledComponents';
 
-function footer() {
+function Footer() {
     return (
         <FooterStyle>
             <h1>African Marketplace</h1>
@@ -12,4 +12,4 @@ function footer() {
     )
 }
 
-export default footer
+export default Footer
