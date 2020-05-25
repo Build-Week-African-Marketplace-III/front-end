@@ -1,10 +1,10 @@
 // Temporary location for all my logic and my API call to display Item componenet with Props
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { ItemDiv, SmallButton } from './StyledComponents';
 import axios from "axios";
 import Item from "./Item";
 
-const ItemList = () => {
+export const ItemList = (props) => {
   let [itemListState, setitemListState] = useState([]);
 
   const backendAPI = "https://swapi.dev/api/people";
@@ -22,15 +22,12 @@ const ItemList = () => {
   
 
   return (
-    <>
-      <h1>Item List</h1>
-      <Link to="/itemform">
-        <h2>Add New Item Test</h2>
-      </Link>
+    <ItemDiv style={{ marginTop: '200px'}}>
+      <h1>Market Listings</h1>
       {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>
       )}
-    </>
+      <SmallButton onClick={()=>{props.history.push('/item-form')}}>Add Item</SmallButton>
+    </ ItemDiv>
   );
 };
 
-export default ItemList;

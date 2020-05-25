@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 import { defaultTheme, typeScale, primaryFont, neutral, black } from '../utils';
+import { Link } from 'react-router-dom';
+import Radium from 'radium';
 
+const RadiumNavLink = Radium(Link);
 
-const Button = styled.button `  
+const Button = styled.button `
+    box-sizing: border-box;
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
     min-width: 150px;
     max-width: 200px;
+    min-height: 50px;
+    max-height: 100px;
     cursor: pointer;
     font-family: ${primaryFont};
     transition: background-color 0.2s linear, color 0.2s linear;
@@ -44,6 +50,11 @@ export const SecondaryButton = styled(Button) `
     }
 
 `
+export const SmallButton = styled(PrimaryButton) `
+    height: 50px;
+    width: 100px;
+    font-size: ${typeScale.paragraph};
+`
 
 export const Form = styled.form `
     width: 477px;
@@ -75,15 +86,23 @@ export const Input = styled.input `
     }
 
 `
+export const ItemDiv = styled.div `
+    background-color: ${defaultTheme.primaryColor};
+    opacity: .95;
+    width: 90%;
+    padding: 40px;
+    border-radius: 2px;
+    font-family: ${primaryFont};
+    color: ${black}
+`
 export const ItemCard = styled.div `
+    background-color: ${neutral};
+    border-radius: 2px;
+    text-align: left;
 
 `
 
 export const HeaderStyle = styled.header `
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0737079098963a20e404bcbeab6b7aec42cfbdbc
     position: absolute;
     top: 0px;
     right: 0px;
@@ -94,7 +113,29 @@ export const HeaderStyle = styled.header `
     letter-spacing: .25;
     position: top;
     color: ${black};
-    font-size: ${typeScale.header1};
+    
+    h1 {
+        font-size: ${typeScale.header1};
+    }
+
+    nav {
+        display: flex;
+        background: ${neutral};
+        opacity: .76;
+        height: 50px;
+    }
+`
+export const StyledLink = styled(RadiumNavLink)`
+    text-decoration: none;
+    display: flex;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    color: ${black};
+
+    :hover {
+        color: ${defaultTheme.tertiaryColor};
+    }
 `
 
 export const FooterStyle = styled.footer `

@@ -3,7 +3,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { Form, Input, PrimaryButton } from './StyledComponents';
 
-function SignUp() {
+export function SignUp() {
 
     const formSchema = yup.object().shape({
         name: yup.string().min( 2, `Must be more than 2 characters`).required("Name is a required field"),
@@ -121,4 +121,4 @@ function SignUp() {
     )
 }
 
-export default SignUp;
+

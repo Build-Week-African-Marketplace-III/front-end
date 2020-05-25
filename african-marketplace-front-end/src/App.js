@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Login } from './components/Login';
-import SignUp from './components/SignUp';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Login, SignUp, Header, Footer, ItemForm, PrivateRoute, ItemList } from './components/index.js';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -14,8 +11,12 @@ function App() {
 
       {/* Routes Section Start */}
       <Switch>
-        <Route exact path='/' component={Login} />
+        
+        <Route exact path='/' render={(props) => <ItemList {...props} />} />
+        <Route path='/login' component={Login} />
         <Route path='/signup' render={(props) => <SignUp {...props} />} />
+        <PrivateRoute path='/item-form' component={ItemForm} />
+
       </Switch>
       {/* End of Routes Section */}
 
