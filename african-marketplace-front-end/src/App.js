@@ -1,24 +1,25 @@
 import React from 'react';
 import './App.css';
-import ItemList from './components/ItemList'
-
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import axios from 'axios'
-import * as yup from "yup";
-import ItemForm from './components/ItemForm';
-
+import { Login } from './components/Login';
+import SignUp from './components/SignUp';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-        <Route exact path="/itemform" component={ItemForm} />
-        <ItemList />
-        </Switch>
-      </Router>
-      
+      <Header />
+      <Footer />
+
+      {/* Routes Section Start */}
+      <Switch>
+        <Route exact path='/' component={Login} />
+        <Route path='/signup' render={(props) => <SignUp {...props} />} />
+      </Switch>
+      {/* End of Routes Section */}
+
+
     </div>
   );
 }

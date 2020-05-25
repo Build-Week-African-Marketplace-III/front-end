@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import * as yup from "yup"; 
 import axios from 'axios'
 import {Form, Input, PrimaryButton} from './StyledComponents'
@@ -102,7 +101,7 @@ const ItemForm = (props) => {
     
         <label htmlFor="AddItem">Add Item Listing 
         
-        <input type="submit" name="submit" />
+        <PrimaryButton type="submit" name="submit" />
         </label>
   
         

@@ -1,17 +1,19 @@
 import styled from 'styled-components';
-import { defaultTheme, typeScale, primaryFont, neutral } from '../utils';
+import { defaultTheme, typeScale, primaryFont, neutral, black } from '../utils';
 
 
 const Button = styled.button `  
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
-    min-width: 100px;
-    max-width: 150px;
+    min-width: 150px;
+    max-width: 200px;
     cursor: pointer;
     font-family: ${primaryFont};
     transition: background-color 0.2s linear, color 0.2s linear;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px 24px;
+    outline: none;
 
 
 `
@@ -19,7 +21,7 @@ const Button = styled.button `
 export const PrimaryButton = styled(Button) `
 
     background-color: ${defaultTheme.primaryButtonColor};
-    color: ${defaultTheme.primaryFontColor};
+    color: ${defaultTheme.secondaryFontColor};
     border: 2px solid ${defaultTheme.primaryButtonColor};
 
     &:hover {
@@ -38,11 +40,12 @@ export const SecondaryButton = styled(Button) `
         background: ${defaultTheme.secondaryButtonColorHover};
         border: 2px solid ${defaultTheme.secondaryButtonBorderHover};
         color: ${defaultTheme.secondaryFontColorHover};
+
     }
+
 `
 
 export const Form = styled.form `
-    position: absolute;
     width: 477px;
     height: 515px;
     background: rgba(251, 175, 0, 0.76);
@@ -50,32 +53,62 @@ export const Form = styled.form `
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    font-family: ${primaryFont};
+    color: ${defaultTheme.primaryFontColor};
+
 
 `
 export const Input = styled.input `
     border: none;
     border-bottom: 2px solid ${neutral};
-    font-family: ${primaryFont};
     max-width: 400px;
     min-width: 300px;
     padding: 25px;
-    
+    font-family: ${primaryFont};
+    outline: none;
+    background: ${neutral};
+
+    ::placeholder {
+        font-size: ${typeScale.paragraph};
+        color: ${defaultTheme.tertiaryColor};
+    }
+
 `
 export const ItemCard = styled.div `
 
 `
 
-export const Header = styled.header `
+export const HeaderStyle = styled.header `
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0737079098963a20e404bcbeab6b7aec42cfbdbc
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 30px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    
+    font-family: ${primaryFont};
+    letter-spacing: .25;
+    position: top;
+    color: ${black};
+    font-size: ${typeScale.header1};
 `
 
-export const Footer = styled.footer `
+export const FooterStyle = styled.footer `
+    position: absolute;
+    bottom: 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+    font-family: ${primaryFont};
+    font-size: ${typeScale.copyrightText};
+    color: ${neutral};
+    background: ${black};
+    opacity: 0.76;
+    width: 100vw;
+    height: 90px;
 `
 
