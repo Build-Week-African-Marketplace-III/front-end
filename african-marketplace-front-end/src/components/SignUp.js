@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import * as yup from "yup";
 import axios from "axios";
 import { Form, Input, PrimaryButton } from './StyledComponents';
@@ -43,7 +43,7 @@ function SignUp() {
                 name: '', 
                 email: '',
                 password: '',
-                tos: ""
+                location: ""
             });
           })
           .catch(err => console.log(err.response));
