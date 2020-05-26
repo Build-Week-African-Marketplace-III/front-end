@@ -12,7 +12,7 @@ const formSchema = yup.object().shape({
     itemLocation: yup.string().required("Please select your item's location")
   });
 
-const ItemForm = (props) => {
+export const ItemForm = (props) => {
     const [itemformState, setitemformState] = useState({
         itemName: "",
         itemDescription: "",
@@ -111,4 +111,3 @@ const ItemForm = (props) => {
   };
 
 
-export default ItemForm;

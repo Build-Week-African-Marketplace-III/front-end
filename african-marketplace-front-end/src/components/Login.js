@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PrimaryButton, SecondaryButton, Form, Input } from './StyledComponents';
-
+import axios from 'axios';
 
 export const Login = (props) => {
 
@@ -9,17 +9,17 @@ export const Login = (props) => {
         password: '' 
     });
 
-    // const hanldeSubmit = e => {
-    //     e.preventDefault();
-    //     axios
-    //         .post('http://localhost:5000/api/login', user)
-    //         .then(res => {
-    //             console.log(res.data.payload)
-    //             localStorage.setItem('token', res.data.payload);
-    //             // props.history.push('/items');
-    //         })
-    //         .catch(err => console.log(err))
-    // }
+    const hanldeSubmit = e => {
+        e.preventDefault();
+        axios
+            .post('https://sauti-africa.herokuapp.com/api/login', user)
+            .then(res => {
+                console.log(res.data.payload)
+                localStorage.setItem('token', res.data.payload);
+                props.history.push('/');
+            })
+            .catch(err => console.log(err))
+    }
 
     const handleChange = e => {
         setUser({
@@ -34,7 +34,7 @@ export const Login = (props) => {
             <Input name='email' placeholder='Email' onChange={handleChange} />
             <Input name='password' type='password' placeholder='Password' onChange={handleChange}/>
             <div className='buttonsLogin'>
-                <PrimaryButton>Login</PrimaryButton>
+                <PrimaryButton onClick={hanldeSubmit}>Login</PrimaryButton>
                 <SecondaryButton onClick={() => {props.history.push('/signup')}}>Sign Up</SecondaryButton>
             </div>
         </Form>
