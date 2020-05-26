@@ -7,7 +7,7 @@ import Item from "./Item";
 export const ItemList = (props) => {
   let [itemListState, setitemListState] = useState([]);
 
-  const backendAPI = "https://swapi.dev/api/people";
+  const backendAPI = "https://sauti-africa.herokuapp.com/api/items";
 
   
   useEffect(() => {
