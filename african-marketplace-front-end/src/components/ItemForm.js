@@ -28,12 +28,12 @@ export const ItemForm = (props) => {
       });
 
     //   Backend API URL here for the location to POST items to
-    // const backendAPIURL = "https://reqres.in/api/users";
+    const backendAPIURL = "https://sauti-africa.herokuapp.com/api/items";
 
       const formSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted");
-        axios.post("backendAPIURL", itemformState)
+        axios.post(backendAPIURL, itemformState)
         .then(response => {
           console.log(response.data)
         })
