@@ -24,7 +24,7 @@ export const ItemList = (props) => {
   return (
     <ItemDiv style={{ marginTop: '200px'}}>
       <h1>Market Listings</h1>
-      {itemListState.map((item) => <Item itemName={item.name} key={item.name}/>
+      {itemListState.map((item) => <Item itemName={item.name} key={item.id} itemDescription={item.description} itemPrice={item.price} itemLocation={item.location}/>
       )}
       <SmallButton onClick={()=>{props.history.push('/item-form')}}>Add Item</SmallButton>
     </ ItemDiv>

@@ -71,24 +71,21 @@ export const ItemForm = (props) => {
   {/* Updated to include the Form styled component */}
       <Form onSubmit={formSubmit}>
      
-        <label htmlFor="itemName">Item Name
-            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
+        
+            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} placeholder="Item Name"/>
             {errorState.itemName.length > 0 ? (
             <p>{errorState.itemName} </p>
           ) : null}
-        </label>
         
-        <label htmlFor="itemDescription">Item Description
-            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} />
+        
+            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} placeholder="Item Description" />
             {errorState.itemDescription.length > 0 ? (
             <p>{errorState.itemDescription} </p>
           ) : null}
         
-        </label>
         
-        <label htmlFor="itemDescription" />Item's Market Location
         
-        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} > 
+        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} placeholder="Market Location" > 
         
         
           <option value="Kenya">Kenya</option>
@@ -98,11 +95,8 @@ export const ItemForm = (props) => {
         </select>
   
         
-    
-        <label htmlFor="AddItem">Add Item Listing 
-        
-        <PrimaryButton type="submit" name="submit" />
-        </label>
+        <PrimaryButton type="submit" name="submit">Add Item </PrimaryButton> 
+  
   
         
       </ Form>
