@@ -34,7 +34,9 @@ export const ItemForm = (props) => {
         e.preventDefault();
         console.log("Form submitted");
         axios.post("backendAPIURL", itemformState)
-        .then(response => {console.log(response.data)})
+        .then(response => {
+          console.log(response.data)
+        })
         .catch(error => {console.log(error)})
       };
     
@@ -66,29 +68,26 @@ export const ItemForm = (props) => {
     return (
     <div className="form">
         
-      <h1>Add your new item</h1>
+
       
   {/* Updated to include the Form styled component */}
       <Form onSubmit={formSubmit} style={{marginTop: '200px'}}>
-     
-        <label htmlFor="itemName">Item Name
-            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
+        <h1>Add a Listing</h1>
+        
+            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} placeholder="Item Name"/>
             {errorState.itemName.length > 0 ? (
             <p>{errorState.itemName} </p>
           ) : null}
-        </label>
         
-        <label htmlFor="itemDescription">Item Description
-            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} />
+        
+            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} placeholder="Item Description" />
             {errorState.itemDescription.length > 0 ? (
             <p>{errorState.itemDescription} </p>
           ) : null}
         
-        </label>
         
-        <label htmlFor="itemDescription" />Item's Market Location
         
-        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} > 
+        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} placeholder="Market Location" > 
         
         
           <option value="Kenya">Kenya</option>
@@ -98,11 +97,8 @@ export const ItemForm = (props) => {
         </select>
   
         
-    
-        <label htmlFor="AddItem">Add Item Listing 
-        
-        <PrimaryButton type="submit" name="submit" />
-        </label>
+        <PrimaryButton type="submit" name="submit">Add Item </PrimaryButton> 
+  
   
         
       </ Form>

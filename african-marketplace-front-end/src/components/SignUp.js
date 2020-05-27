@@ -84,7 +84,7 @@ export function SignUp() {
 
 
     return (
-        <Form className="centeredToPageForms">
+        <Form className="centeredToPageForms" onSubmit={formSubmit}>
             <h1>Sign Up</h1>
 
                 {/* Name */}
@@ -118,7 +118,7 @@ export function SignUp() {
                     placeholder='City'
                     onChange={inputChange}
                 />{errors.location.length > 0 ? <p className='error'>{errors.location}</p> : null}
-              <PrimaryButton onClick={formSubmit}>Submit</PrimaryButton>
+              <PrimaryButton >Submit</PrimaryButton>
         </Form>
     )
 }
