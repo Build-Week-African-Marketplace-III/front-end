@@ -83,40 +83,36 @@ export function SignUp() {
     return (
         <Form className="centeredToPageForms">
             <h1>Sign Up</h1>
-            <form>
+
                 {/* Name */}
-                <label htmlFor='name'>Name</label>
-                <input 
+                <Input 
                     name='name'
                     type='text'
                     placeholder='Name'
                     onChange={inputChange}
                 />{errors.name.length > 0 ? <p className='error'>{errors.name}</p> : null}
                 {/* Email */}
-                <label htmlFor='email'>Email</label>
-                <input 
+                <Input 
                     name='email'
                     type='text'
                     placeholder='Email Address'
                     onChange={inputChange}
                 />{errors.email.length > 0 ? (<p className='error'>{errors.email}</p>) : null}
                 {/* Password */}
-                <label htmlFor='password'>Password</label>
-                <input 
+                <Input 
                     name='password'
                     type='text'
                     placeholder='Password'
                     onChange={inputChange}
                 />{errors.password.length > 0 ? (<p className='error'>{errors.password}</p>) : null}
                 {/* Location - city */}
-                <label htmlFor='location'>Location</label>
-                <input 
+                <Input 
                     name='location'
                     type='text'
                     placeholder='City'
                     onChange={inputChange}
                 />{errors.location.length > 0 ? <p className='error'>{errors.location}</p> : null}
-            </form>
+              <PrimaryButton onClick={formSubmit}>Submit</PrimaryButton>
         </Form>
     )
 }

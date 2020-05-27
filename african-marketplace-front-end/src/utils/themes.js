@@ -1,5 +1,5 @@
 import { primaryFont } from './typography';
-import { yellow, neutral, teal, orange, black } from './colors';
+import { yellow, neutral, teal, orange } from './colors';
 
 export const defaultTheme = {
     primaryColor: yellow,
