@@ -69,7 +69,7 @@ export const ItemForm = (props) => {
       <h1>Add your new item</h1>
       
   {/* Updated to include the Form styled component */}
-      <Form onSubmit={formSubmit}>
+      <Form onSubmit={formSubmit} style={{marginTop: '200px'}}>
      
         <label htmlFor="itemName">Item Name
             <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
