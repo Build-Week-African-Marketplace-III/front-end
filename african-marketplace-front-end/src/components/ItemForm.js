@@ -6,25 +6,25 @@ import {Form, Input, PrimaryButton} from './StyledComponents'
 
 // Validation Logic for the item form
 const formSchema = yup.object().shape({
-    itemName: yup.string().min(2).required("Please name your item"),
-    itemDescription: yup.string().required("Please describe your item"),
-    itemPrice: yup.number().required("Please enter your item's price"),
-    itemLocation: yup.string().required("Please select your item's location")
+    name: yup.string().min(2).required("Please name your item"),
+    description: yup.string().required("Please describe your item"),
+    price: yup.number().required("Please enter your item's price"),
+    location: yup.string().required("Please select your item's location")
   });
 
 export const ItemForm = (props) => {
     const [itemformState, setitemformState] = useState({
-        itemName: "",
-        itemDescription: "",
-        itemPrice: "",
-        itemLocation: ""
+      name: "",
+      description: "",
+      price: "",
+      location: ""
       });
     
       const [errorState, seterrorState] = useState({
-        itemName: "",
-        itemDescription: "",
-        itemPrice: "",
-        itemLocation: ""
+        name: "",
+        description: "",
+        price: "",
+        location: ""
       });
 
     //   Backend API URL here for the location to POST items to
@@ -72,21 +72,25 @@ export const ItemForm = (props) => {
       <Form onSubmit={formSubmit}>
      
         
-            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} placeholder="Item Name"/>
-            {errorState.itemName.length > 0 ? (
-            <p>{errorState.itemName} </p>
+            <Input type="text" name="name" onChange={inputChange} value={itemformState.name} placeholder="Item Name"/>
+            {errorState.name.length > 0 ? (
+            <p>{errorState.name} </p>
           ) : null}
         
         
-            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} placeholder="Item Description" />
-            {errorState.itemDescription.length > 0 ? (
-            <p>{errorState.itemDescription} </p>
+            <Input type="textarea" rows="4" name="description" onChange={inputChange} value={itemformState.description} placeholder="Item Description" />
+            {errorState.description.length > 0 ? (
+            <p>{errorState.description} </p>
+          ) : null}
+
+            <Input type="textarea" name="price" onChange={inputChange} value={itemformState.price} placeholder="Item Price" />
+            {errorState.price.length > 0 ? (
+            <p>{errorState.price} </p>
           ) : null}
         
         
         
-        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} placeholder="Market Location" > 
-        
+        <select name="location" value={itemformState.location} onChange={inputChange} placeholder="Market Location" > 
         
           <option value="Kenya">Kenya</option>
           <option value="Ethiopia">Ethiopia</option>
