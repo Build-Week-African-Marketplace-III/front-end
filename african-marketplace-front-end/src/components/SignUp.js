@@ -9,8 +9,8 @@ export function SignUp() {
         name: yup.string().min( 2, `Must be more than 2 characters`).required("Name is a required field"),
         email: yup.string().email("must be a valid email address").required("must include a valid email"),
         password: yup.string().required('Password is required'),
-        // passwordConfirmation: yup.string()
-        //     .oneOf([yup.ref('password'), null], 'Passwords must match'),
+        // passwordConfirmation: yup.string(),
+        // .oneOf([yup.ref('password'), null], 'Passwords must match'),
         location: yup.string().required('Please type a valid city'),
     })
 
@@ -36,8 +36,10 @@ export function SignUp() {
         axios
           .post("https://sauti-africa.herokuapp.com/", formState)
           .then(res => {
+           
             setPost(res.data); // get just the form data from the REST api
-            console.log("success", post);
+            console.log("success", res);
+            
             // reset form if successful
             setFormState({
                 name: '', 
@@ -45,6 +47,7 @@ export function SignUp() {
                 password: '',
                 location: ""
             });
+
           })
           .catch(err => console.log(err.response));
       };
@@ -69,10 +72,10 @@ export function SignUp() {
     
       const inputChange = e => {
         e.persist();
+
         const newFormData = {
           ...formState,
-          [e.target.name]:
-            e.target.type === "checkbox" ? e.target.checked : e.target.value
+          [e.target.name]: e.target.type === "checkbox" ? e.target.checked : e.target.value
         };
     
         validateChange(e);
@@ -91,6 +94,7 @@ export function SignUp() {
                     placeholder='Name'
                     onChange={inputChange}
                 />{errors.name.length > 0 ? <p className='error'>{errors.name}</p> : null}
+                
                 {/* Email */}
                 <Input 
                     name='email'
@@ -98,13 +102,15 @@ export function SignUp() {
                     placeholder='Email Address'
                     onChange={inputChange}
                 />{errors.email.length > 0 ? (<p className='error'>{errors.email}</p>) : null}
+                
                 {/* Password */}
                 <Input 
                     name='password'
-                    type='text'
+                    type='password'
                     placeholder='Password'
                     onChange={inputChange}
                 />{errors.password.length > 0 ? (<p className='error'>{errors.password}</p>) : null}
+                
                 {/* Location - city */}
                 <Input 
                     name='location'
