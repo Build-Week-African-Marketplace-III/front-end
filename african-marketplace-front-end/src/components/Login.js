@@ -14,7 +14,7 @@ export const Login = (props) => {
         axios
             .post('https://sauti-africa.herokuapp.com/api/login', user)
             .then(res => {
-                console.log(res.data.payload)
+                console.log(res.data.payload);
                 localStorage.setItem('token', res.data.payload);
                 props.history.push('/');
             })

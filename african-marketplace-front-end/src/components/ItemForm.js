@@ -34,7 +34,9 @@ export const ItemForm = (props) => {
         e.preventDefault();
         console.log("Form submitted");
         axios.post("backendAPIURL", itemformState)
-        .then(response => {console.log(response.data)})
+        .then(response => {
+          console.log(response.data)
+        })
         .catch(error => {console.log(error)})
       };
     
@@ -66,11 +68,11 @@ export const ItemForm = (props) => {
     return (
     <div className="form">
         
-      <h1>Add your new item</h1>
+
       
   {/* Updated to include the Form styled component */}
-      <Form onSubmit={formSubmit}>
-     
+      <Form onSubmit={formSubmit} style={{marginTop: '200px'}}>
+        <h1>Add a Listing</h1>
         
             <Input type="text" name="name" onChange={inputChange} value={itemformState.name} placeholder="Item Name"/>
             {errorState.name.length > 0 ? (
