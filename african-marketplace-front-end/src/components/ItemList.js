@@ -14,8 +14,8 @@ export const ItemList = (props) => {
     axios
           .get(backendAPI)
           .then((response) => {
-            console.log("Logged", response.data.results);
-            setitemListState(response.data.results);
+            console.log("Logged", response);
+            setitemListState(response);
           })
           .catch((error) => console.log(error));
   },[])
