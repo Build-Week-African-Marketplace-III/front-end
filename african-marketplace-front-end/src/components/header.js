@@ -11,7 +11,7 @@ export function Header() {
             <PrimaryButton>Login</PrimaryButton>
             <SecondaryButton>Sign Up</SecondaryButton>
             <nav className="nav">
-                <StyledLink hoverClassName='hover' to={`/`}>Home</StyledLink>
+                <StyledLink to={`/`}>Home</StyledLink>
                 <StyledLink to={`/about`}>About</StyledLink>
                 <StyledLink to={`/contact`}>Contact Us</StyledLink>
             </nav>
