@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as yup from "yup";
-import axios from "axios";
+import { axiosWithAuth } from "../axiosWithAuth";
 import { Form, Input, PrimaryButton } from './StyledComponents';
 
 export function SignUp() {
@@ -33,8 +33,8 @@ export function SignUp() {
 
     const formSubmit = e => {
         e.preventDefault();
-        axios
-          .post("https://sauti-africa.herokuapp.com/", formState)
+        axiosWithAuth()
+          .post("https://sauti-africa.herokuapp.com/api/register", formState)
           .then(res => {
            
             setPost(res.data); // get just the form data from the REST api

@@ -5,10 +5,10 @@ import { ItemCard } from './StyledComponents';
 const Item = (props) => {
   return (
     <ItemCard className="item">
-      <p>{props.itemName}</p>
-      <p>{props.itemDescription}</p>
-      <p>{props.itemPrice}</p>
-      <p>{props.itemLocation}</p>
+      <p>Item: {props.itemName}</p>
+      <p>Description: {props.itemDescription}</p>
+      <p>Item Price: {props.itemPrice}</p>
+      <p>Market Location: {props.itemLocation}</p>
       {/* Not sure if this field will come back. */}
       {/* <p>{props.id}</p> */}
     </ItemCard>

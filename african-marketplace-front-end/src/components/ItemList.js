@@ -15,7 +15,7 @@ export const ItemList = (props) => {
           .get(backendAPI)
           .then((response) => {
             console.log("Logged", response);
-            setitemListState(response);
+            setitemListState(response.data);
           })
           .catch((error) => console.log(error));
   },[])
