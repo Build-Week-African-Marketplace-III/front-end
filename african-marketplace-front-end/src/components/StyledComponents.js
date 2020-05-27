@@ -1,18 +1,25 @@
 import styled from 'styled-components';
 import { defaultTheme, typeScale, primaryFont, neutral, black } from '../utils';
+import { Link } from 'react-router-dom';
+import Radium from 'radium';
 
+const RadiumNavLink = Radium(Link);
 
-const Button = styled.button `  
+const Button = styled.button `
+    box-sizing: border-box;
     padding: 12px 24px;
     font-size: ${typeScale.paragraph};
     border-radius: 2px;
     min-width: 150px;
     max-width: 200px;
+    min-height: 50px;
+    max-height: 100px;
     cursor: pointer;
     font-family: ${primaryFont};
     transition: background-color 0.2s linear, color 0.2s linear;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px 24px;
+    outline: none;
 
 
 `
@@ -43,6 +50,11 @@ export const SecondaryButton = styled(Button) `
     }
 
 `
+export const SmallButton = styled(PrimaryButton) `
+    height: 50px;
+    width: 100px;
+    font-size: ${typeScale.paragraph};
+`
 
 export const Form = styled.form `
     width: 477px;
@@ -66,6 +78,7 @@ export const Input = styled.input `
     padding: 25px;
     font-family: ${primaryFont};
     outline: none;
+    background: ${neutral};
 
     ::placeholder {
         font-size: ${typeScale.paragraph};
@@ -73,7 +86,19 @@ export const Input = styled.input `
     }
 
 `
+export const ItemDiv = styled.div `
+    background-color: ${defaultTheme.primaryColor};
+    opacity: .95;
+    width: 90%;
+    padding: 40px;
+    border-radius: 2px;
+    font-family: ${primaryFont};
+    color: ${black}
+`
 export const ItemCard = styled.div `
+    background-color: ${neutral};
+    border-radius: 2px;
+    text-align: left;
 
 `
 

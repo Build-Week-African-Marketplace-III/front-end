@@ -6,25 +6,25 @@ import {Form, Input, PrimaryButton} from './StyledComponents'
 
 // Validation Logic for the item form
 const formSchema = yup.object().shape({
-    itemName: yup.string().min(2).required("Please name your item"),
-    itemDescription: yup.string().required("Please describe your item"),
-    itemPrice: yup.number().required("Please enter your item's price"),
-    itemLocation: yup.string().required("Please select your item's location")
+    name: yup.string().min(2).required("Please name your item"),
+    description: yup.string().required("Please describe your item"),
+    price: yup.number().required("Please enter your item's price"),
+    location: yup.string().required("Please select your item's location")
   });
 
-const ItemsForm = (props) => {
+export const ItemForm = (props) => {
     const [itemformState, setitemformState] = useState({
-        itemName: "",
-        itemDescription: "",
-        itemPrice: "",
-        itemLocation: ""
+      name: "",
+      description: "",
+      price: "",
+      location: ""
       });
     
       const [errorState, seterrorState] = useState({
-        itemName: "",
-        itemDescription: "",
-        itemPrice: "",
-        itemLocation: ""
+        name: "",
+        description: "",
+        price: "",
+        location: ""
       });
 
     //   Backend API URL here for the location to POST items to
@@ -34,7 +34,9 @@ const ItemsForm = (props) => {
         e.preventDefault();
         console.log("Form submitted");
         axios.post("backendAPIURL", itemformState)
-        .then(response => {console.log(response.data)})
+        .then(response => {
+          console.log(response.data)
+        })
         .catch(error => {console.log(error)})
       };
     
@@ -66,30 +68,31 @@ const ItemsForm = (props) => {
     return (
     <div className="form">
         
-      <h1>Add your new item</h1>
+
       
-  
-      <Form onSubmit={formSubmit}>
-     
-        <label htmlFor="itemName">Item Name
-            <Input type="text" name="itemName" onChange={inputChange} value={itemformState.itemName} />
-            {errorState.itemName.length > 0 ? (
-            <p>{errorState.itemName} </p>
-          ) : null}
-        </label>
+  {/* Updated to include the Form styled component */}
+      <Form onSubmit={formSubmit} style={{marginTop: '200px'}}>
+        <h1>Add a Listing</h1>
         
-        <label htmlFor="itemDescription">Item Description
-            <Input type="textarea" rows="4" name="itemDescription" onChange={inputChange} value={itemformState.itemDescription} />
-            {errorState.itemDescription.length > 0 ? (
-            <p>{errorState.itemDescription} </p>
+            <Input type="text" name="name" onChange={inputChange} value={itemformState.name} placeholder="Item Name"/>
+            {errorState.name.length > 0 ? (
+            <p>{errorState.name} </p>
           ) : null}
         
-        </label>
         
-        <label htmlFor="itemDescription" />Item's Market Location
+            <Input type="textarea" rows="4" name="description" onChange={inputChange} value={itemformState.description} placeholder="Item Description" />
+            {errorState.description.length > 0 ? (
+            <p>{errorState.description} </p>
+          ) : null}
+
+            <Input type="textarea" name="price" onChange={inputChange} value={itemformState.price} placeholder="Item Price" />
+            {errorState.price.length > 0 ? (
+            <p>{errorState.price} </p>
+          ) : null}
         
-        <select name="itemLocation" value={itemformState.itemLocation} onChange={inputChange} > 
         
+        
+        <select name="location" value={itemformState.location} onChange={inputChange} placeholder="Market Location" > 
         
           <option value="Kenya">Kenya</option>
           <option value="Ethiopia">Ethiopia</option>
@@ -98,11 +101,8 @@ const ItemsForm = (props) => {
         </select>
   
         
-    
-        <label htmlFor="AddItem">Add Item Listing 
-        
-        <PrimaryButton type="submit" name="submit" />
-        </label>
+        <PrimaryButton type="submit" name="submit">Add Item </PrimaryButton> 
+  
   
         
       </ Form>
@@ -111,4 +111,3 @@ const ItemsForm = (props) => {
   };
 
 
-export default ItemsForm;
