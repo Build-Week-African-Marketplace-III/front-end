@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { axiosWithAuth } from "../axiosWithAuth";
 import { Form, Input, PrimaryButton } from './StyledComponents';
 
-export function SignUp() {
+export function SignUp(props) {
 
     const formSchema = yup.object().shape({
         name: yup.string().min( 2, `Must be more than 2 characters`).required("Name is a required field"),
@@ -39,6 +39,7 @@ export function SignUp() {
            
             setPost(res.data); // get just the form data from the REST api
             console.log("success", res);
+            props.history.push('/')
             
             // reset form if successful
             setFormState({

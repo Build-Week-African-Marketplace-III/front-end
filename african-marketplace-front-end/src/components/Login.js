@@ -11,10 +11,11 @@ export const Login = (props) => {
 
     const hanldeSubmit = e => {
         e.preventDefault();
+        console.log(user)
         axios
             .post('https://sauti-africa.herokuapp.com/api/login', user)
             .then(res => {
-                console.log(res.data.payload);
+                console.log(res);
                 localStorage.setItem('token', res.data.payload);
                 props.history.push('/');
             })
@@ -22,19 +23,19 @@ export const Login = (props) => {
     }
 
     const handleChange = e => {
-        setUser({
+        setUser({...user,
             [e.target.name] : e.target.value
         })
     }
 
     return (
-        <Form className='centeredToPageForms'>
-        {/* <Form onSubmit={hanldeSubmit}> */}
+
+        <Form style={{marginTop: '200px'}} onSubmit={hanldeSubmit}>
             <h1>Login</ h1>
             <Input name='email' placeholder='Email' onChange={handleChange} />
             <Input name='password' type='password' placeholder='Password' onChange={handleChange}/>
             <div className='buttonsLogin'>
-                <PrimaryButton onClick={hanldeSubmit}>Login</PrimaryButton>
+                <PrimaryButton>Login</PrimaryButton>
                 <SecondaryButton onClick={() => {props.history.push('/signup')}}>Sign Up</SecondaryButton>
             </div>
         </Form>

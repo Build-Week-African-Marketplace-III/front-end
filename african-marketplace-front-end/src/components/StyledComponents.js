@@ -139,7 +139,7 @@ export const StyledLink = styled(RadiumNavLink)`
 `
 
 export const FooterStyle = styled.footer `
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     display: flex;
     justify-content: space-evenly;
