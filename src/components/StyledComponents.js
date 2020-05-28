@@ -124,6 +124,18 @@ export const StyledLink = styled(RadiumNavLink)`
     }
 `
 
+export const StyledLinkA = styled.a`
+    text-decoration: none;
+    display: flex;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    color: ${black};
+    :hover {
+        color: ${defaultTheme.tertiaryColor};
+    }
+`
+
 export const FooterStyle = styled.footer `
     position: fixed;
     bottom: 0px;
