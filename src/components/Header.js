@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderStyle, PrimaryButton, SecondaryButton, StyledLink } from './StyledComponents';
+import { HeaderStyle, PrimaryButton, SecondaryButton, StyledLink, StyledLinkA } from './StyledComponents';
 import Logo from '../img/logo-black.png'
 
 export function Header() {
@@ -19,12 +19,11 @@ export function Header() {
             </Link>
 
             <nav className="nav">
-                <StyledLink to={`/`}>Home</StyledLink>
-                <StyledLink to={`/about`}>About</StyledLink>
-                <StyledLink to={`/contact`}>Contact Us</StyledLink>
+                <StyledLinkA href="https://build-week-african-marketplace-iii.github.io/user-interface/index.html">Home</StyledLinkA>
+                <StyledLinkA href="https://build-week-african-marketplace-iii.github.io/user-interface/about.html">About</StyledLinkA>
+                <StyledLink to={'/'}>Listings</StyledLink>
             </nav>
                 
         </HeaderStyle>
     )
 };
-
