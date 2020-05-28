@@ -22,7 +22,7 @@ export const ItemList = (props) => {
   
 
   return (
-    <ItemDiv style={{ marginTop: '200px'}}>
+    <ItemDiv style={{ marginTop: '200px', marginBottom: '200px'}}>
       <h1>Market Listings</h1>
       {itemListState.map((item) => <Item itemName={item.name} key={item.id} itemDescription={item.description} itemPrice={item.price} itemLocation={item.location}/>
       )}
