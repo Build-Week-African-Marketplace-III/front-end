@@ -7,8 +7,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer />
-
       {/* Routes Section Start */}
       <Switch>
         
@@ -19,7 +17,7 @@ function App() {
 
       </Switch>
       {/* End of Routes Section */}
-
+      <Footer />
 
     </div>
   );
