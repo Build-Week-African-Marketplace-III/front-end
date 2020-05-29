@@ -20,16 +20,12 @@ const Button = styled.button `
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px 24px;
     outline: none;
-
-
 `
 
 export const PrimaryButton = styled(Button) `
-
     background-color: ${defaultTheme.primaryButtonColor};
     color: ${defaultTheme.secondaryFontColor};
     border: 2px solid ${defaultTheme.primaryButtonColor};
-
     &:hover {
         background: ${defaultTheme.primaryColorButtonHover};
         border: 2px solid ${defaultTheme.primaryButtonColor};
@@ -41,14 +37,11 @@ export const SecondaryButton = styled(Button) `
     background-color: ${defaultTheme.secondaryButtonColor};
     color: ${defaultTheme.secondaryFontColor};
     border: 2px solid ${defaultTheme.secondaryButtonColor};
-
     &:hover {
         background: ${defaultTheme.secondaryButtonColorHover};
         border: 2px solid ${defaultTheme.secondaryButtonBorderHover};
         color: ${defaultTheme.secondaryFontColorHover};
-
     }
-
 `
 export const SmallButton = styled(PrimaryButton) `
     height: 50px;
@@ -67,8 +60,6 @@ export const Form = styled.form `
     justify-content: space-around;
     font-family: ${primaryFont};
     color: ${defaultTheme.primaryFontColor};
-
-
 `
 export const Input = styled.input `
     border: none;
@@ -79,12 +70,10 @@ export const Input = styled.input `
     font-family: ${primaryFont};
     outline: none;
     background: ${neutral};
-
     ::placeholder {
         font-size: ${typeScale.paragraph};
         color: ${defaultTheme.tertiaryColor};
     }
-
 `
 export const ItemDiv = styled.div `
     background-color: ${defaultTheme.primaryColor};
@@ -99,7 +88,6 @@ export const ItemCard = styled.div `
     background-color: ${neutral};
     border-radius: 2px;
     text-align: left;
-
 `
 
 export const HeaderStyle = styled.header `
@@ -107,7 +95,9 @@ export const HeaderStyle = styled.header `
     top: 0px;
     right: 0px;
     margin: 30px;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     font-family: ${primaryFont};
     letter-spacing: .25;
@@ -117,12 +107,15 @@ export const HeaderStyle = styled.header `
     h1 {
         font-size: ${typeScale.header1};
     }
-
     nav {
         display: flex;
         background: ${neutral};
         opacity: .76;
         height: 50px;
+    }
+
+    .marketplace-logo {
+        display: flex;
     }
 `
 export const StyledLink = styled(RadiumNavLink)`
@@ -132,7 +125,18 @@ export const StyledLink = styled(RadiumNavLink)`
     display: flex;
     align-items: center;
     color: ${black};
+    :hover {
+        color: ${defaultTheme.tertiaryColor};
+    }
+`
 
+export const StyledLinkA = styled.a`
+    text-decoration: none;
+    display: flex;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    color: ${black};
     :hover {
         color: ${defaultTheme.tertiaryColor};
     }
@@ -152,4 +156,3 @@ export const FooterStyle = styled.footer `
     width: 100vw;
     height: 90px;
 `
-
