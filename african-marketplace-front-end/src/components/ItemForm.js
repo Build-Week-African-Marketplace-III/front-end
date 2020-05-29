@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as yup from "yup"; 
-import axios from 'axios'
+// import axios from 'axios'
+import { axiosWithAuth } from "../axiosWithAuth";
 import {Form, Input, PrimaryButton} from './StyledComponents'
 
 
@@ -33,7 +34,8 @@ export const ItemForm = (props) => {
       const formSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted");
-        axios.post(backendAPIURL, itemformState)
+        axiosWithAuth()
+        .post(backendAPIURL, itemformState)
         .then(response => {
           console.log(response.data)
         })
