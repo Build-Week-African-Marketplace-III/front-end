@@ -95,7 +95,9 @@ export const HeaderStyle = styled.header `
     top: 0px;
     right: 0px;
     margin: 30px;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     font-family: ${primaryFont};
     letter-spacing: .25;
@@ -110,6 +112,10 @@ export const HeaderStyle = styled.header `
         background: ${neutral};
         opacity: .76;
         height: 50px;
+    }
+
+    .marketplace-logo {
+        display: flex;
     }
 `
 export const StyledLink = styled(RadiumNavLink)`
