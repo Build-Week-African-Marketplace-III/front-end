@@ -38,6 +38,7 @@ export const ItemForm = (props) => {
         .post(backendAPIURL, itemformState)
         .then(response => {
           console.log(response.data)
+          props.history.push('/');
         })
         .catch(error => {console.log(error)})
       };
@@ -96,6 +97,7 @@ export const ItemForm = (props) => {
         
         <select name="location" value={itemformState.location} onChange={inputChange} placeholder="Market Location" > 
         
+          <option value="">Select Your Market Location</option>
           <option value="Kenya">Kenya</option>
           <option value="Ethiopia">Ethiopia</option>
           <option value="Rwanda">Rwanda</option>
