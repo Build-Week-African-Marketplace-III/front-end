@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as yup from "yup"; 
 // import axios from 'axios'
 import { axiosWithAuth } from "../axiosWithAuth";
-import {Form, Input, PrimaryButton} from './StyledComponents'
+import {Form, Input, PrimaryButton, Select} from './StyledComponents'
 
 
 // Validation Logic for the item form
@@ -95,14 +95,14 @@ export const ItemForm = (props) => {
         
         
         
-        <select name="location" value={itemformState.location} onChange={inputChange} placeholder="Market Location" > 
+        <Select name="location" value={itemformState.location} onChange={inputChange} placeholder="Market Location" > 
         
           <option value="">Select Your Market Location</option>
           <option value="Kenya">Kenya</option>
           <option value="Ethiopia">Ethiopia</option>
           <option value="Rwanda">Rwanda</option>
           <option value="Burundi">Burundi</option>
-        </select>
+        </Select>
   
         
         <PrimaryButton type="submit" name="submit">Add Item </PrimaryButton> 

@@ -5,9 +5,9 @@ import { ItemCard } from './StyledComponents';
 const Item = (props) => {
   return (
     <ItemCard className="item">
-      <p>Item: {props.itemName}</p>
+      <h3>{props.itemName}</h3>
       <p>Description: {props.itemDescription}</p>
-      <p>Item Price: {props.itemPrice}</p>
+      <p>Price: {props.itemPrice}</p>
       <p>Market Location: {props.itemLocation}</p>
       {/* Not sure if this field will come back. */}
       {/* <p>{props.id}</p> */}

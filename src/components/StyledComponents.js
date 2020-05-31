@@ -88,6 +88,15 @@ export const ItemCard = styled.div `
     background-color: ${neutral};
     border-radius: 2px;
     text-align: left;
+    font-family: ${primaryFont};
+    color: ${defaultTheme.tertiaryColor};
+    h3 {
+        padding: 10px;
+        text-align: center;
+    }
+    p {  
+    padding: 10px;
+    }
 `
 
 export const HeaderStyle = styled.header `
@@ -155,4 +164,27 @@ export const FooterStyle = styled.footer `
     opacity: 0.76;
     width: 100vw;
     height: 90px;
+`
+
+export const Select = styled.select`
+  max-width: 400px;
+  min-width: 300px;
+  height:35px;
+  background: white;
+  color: gray;
+  padding-left: 5px;
+  font-size: 14px;
+  border:none;
+  margin-left: 10px;
+  font-family: ${primaryFont};
+  color: ${defaultTheme.tertiaryColor};
+       option {
+        color: ${defaultTheme.tertiaryColor};
+         background: white;
+         font-weight: small;
+         display: flex;
+         white-space: pre;
+         min-height: 20px;
+         padding: 0px 2px 1px;
+       }
 `
