@@ -68,10 +68,10 @@ export const ItemForm = (props) => {
             seterrorState({ ...errorState, [e.target.name]: err.errors[0] });
           });
       };
+
     return (
     <div className="form">
         
-
       
   {/* Updated to include the Form styled component */}
       <Form onSubmit={formSubmit} style={{marginTop: '200px'}}>

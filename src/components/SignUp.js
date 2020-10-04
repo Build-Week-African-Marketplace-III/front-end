@@ -29,7 +29,7 @@ export function SignUp(props) {
         location: ""
     });
 
-    const [post, setPost] = useState([]);
+    const [setPost] = useState([]);
 
     const formSubmit = e => {
         e.preventDefault();
